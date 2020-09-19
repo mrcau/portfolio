@@ -263,7 +263,6 @@
     opacity: 1;
     top:0;
   }
-
   .work__projects{
     display: flex;
     flex-wrap: wrap;
@@ -309,6 +308,8 @@
   height:3px;
   margin: 15px 0 5px 0;
 }
+
+/* testimonials */
 #testimonials{
     background: var(--color-light-white);
 
@@ -340,4 +341,23 @@
 }
 .test__speach a{
     color: var(--color-pink);
+}
+
+/* Contact */
+#contact{
+    background: var(--color-pink);
+    color: var(--color-white);
+}
+#contact h1, h2, .contact__rights, .contact__links{
+    color: var(--color-white);
+}
+.contact__links i{
+font-size: var(--font-medium);
+transition: all 300ms;
+margin: 10px;
+}
+
+.contact__links i:hover{
+    transform: scale(1.2) rotate(360deg);
+    color: var(--color-black);
 }

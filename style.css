@@ -82,6 +82,7 @@
     color:var(--color-white);
     font-weight: var(--weight-semi-bold);
     font-size: var(--font-medium);
+    padding-left: 20px;
   }
   ul{
     list-style: none;
@@ -103,4 +104,33 @@
 }
   .navbar__menu__item.active{
     border:solid 1px var(--color-white);
+  }
+
+  /* Home */
+  #home{
+    background: url('img/homeBg.png') center/cover no-repeat;
+    padding:40px;
+    text-align: center;
+  }
+  .home__avatar{
+    width:240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 2px solid var(--color-dark-white);
+  }
+  .home__title, .home__description{
+    color: var(--color-white);
+  }
+  .home__contact{
+    font-size: var(--font-regular);
+    font-weight:var(--weight-bold);
+    margin: 24;
+    padding: 11px;
+    border: 2px solid #000;
+  }
+  button{
+    background: transparent;
+    cursor:pointer;
+    outline: none;
+    border-radius: 12px;
   }

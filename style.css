@@ -309,3 +309,35 @@
   height:3px;
   margin: 15px 0 5px 0;
 }
+#testimonials{
+    background: var(--color-light-white);
+
+}
+.test{
+    display: flex;
+    margin: 40px;
+    align-items: center;
+}
+.test__people{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.test__people:nth-child(odd){
+    margin-right: 20px;
+}
+.test__people:nth-child(even){
+    margin-left: 20px;
+}
+.test__speach{
+    background: var(--color-white);
+    padding: 18px;
+    border-radius: 12px;
+
+}
+.test__speach p{
+    color: var(--color-light-grey);
+}
+.test__speach a{
+    color: var(--color-pink);
+}

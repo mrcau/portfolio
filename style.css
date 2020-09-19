@@ -36,7 +36,13 @@
   .section{
     padding:50px;
     text-align: center;
+    margin: auto;
     max-width: 1200px;
+
+  }
+  .section__container{
+    padding:50px;
+    text-align: center;
     margin: auto;
   }
   /* Typography */
@@ -187,4 +193,36 @@
   }
   .job__period{
     font-size: var(--font-micro);
+  }
+
+  /* Skill */
+  #skills{
+    background-color: var(--color-yellow);
+  }
+  .skillset{
+    display: flex;
+    color: var(--color-white);
+    background: var(--color-light-grey);
+    margin: 20px 0;
+
+  }
+  .skill__left{
+    flex-basis: 60%;
+    background: var(--color-dark-grey);
+  }
+  .skill__right{
+    flex-basis: 40%;
+  }
+  .tools{
+    background: gray;
+  }
+  .skill_title{
+    color:var(--color-white);
+  }
+  progress{
+    width: 80%;
+  }
+  .skill__description{
+    display: flex;
+    justify-content: space-around;
   }

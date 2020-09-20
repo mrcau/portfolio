@@ -22,9 +22,15 @@ menu.addEventListener('click',(event)=>{
     if(link==null){
         return;
     }
-    console.log(link);
-    const scrollTo=document.querySelector(link);
-    console.log(scrollTo);
-    scrollTo.scrollIntoView({behavior:"smooth"});
+    scrolling(link);
 });
 
+function scrolling(selector){
+    const scrollTo=document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:"smooth"});
+}
+
+const btn__home__contact=document.querySelector('.home__contact');
+btn__home__contact.addEventListener('click',()=>{
+    scrolling('#contact');
+})

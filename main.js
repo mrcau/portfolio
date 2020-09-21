@@ -43,3 +43,18 @@ document.addEventListener('scroll',()=>{
     console.log(1-window.scrollY / homeHeight);
     home.style.opacity = 1-window.scrollY / homeHeight;
 });
+
+// Show arrowUp
+const arrowUp=document.querySelector('.arrowUp');
+document.addEventListener('scroll',()=>{
+    if(window.scrollY>homeHeight/2){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
+
+arrowUp.addEventListener('click',()=>{
+    scrolling('#home');
+
+})

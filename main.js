@@ -17,6 +17,12 @@ document.addEventListener('scroll',()=>{
 
 // Handle scrolling
 const menu=document.querySelector('.navbar__menu');
+
+function scrolling(selector){
+    const scrollTo=document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:"smooth"});
+}
+
 menu.addEventListener('click',(event)=>{
     const link = event.target.dataset.link;
     if(link==null){
@@ -25,12 +31,15 @@ menu.addEventListener('click',(event)=>{
     scrolling(link);
 });
 
-function scrolling(selector){
-    const scrollTo=document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:"smooth"});
-}
 
 const btn__home__contact=document.querySelector('.home__contact');
 btn__home__contact.addEventListener('click',()=>{
     scrolling('#contact');
-})
+});
+
+const home = document.querySelector('#home');
+const homeHeight=home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    console.log(1-window.scrollY / homeHeight);
+    home.style.opacity = 1-window.scrollY / homeHeight;
+});

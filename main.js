@@ -54,17 +54,26 @@ arrowUp.addEventListener('click',()=>{
 // Project
 const workBtnCategory=document.querySelector('.work__caregory');
 const workBtnProject=document.querySelector('.work__projects');
-const projects = document.querySelector('.project');
+const projects = document.querySelectorAll('.project');
 
 workBtnCategory.addEventListener('click',(e)=>{
     const filter=e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if(filter==null){
         return;
     }
-    projects.array.forEach(project => {
-        console.log(project.dataset.type);
+    workBtnProject.classList.add('anime');
+    
+    setTimeout(()=>{
+        projects.forEach((project) => {
+            if(filter==='*'||filter===project.dataset.type){
+                project.classList.remove('invisible');
+            }else{
+                project.classList.add('invisible');
+            }
+        });
+        workBtnProject.classList.remove('anime');
 
-    });
+    },300);
 });
 
 

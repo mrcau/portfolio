@@ -61,6 +61,12 @@ workBtnCategory.addEventListener('click',(e)=>{
     if(filter==null){
         return;
     }
+
+    //Remove selection from the preious item and slect
+    const active = document.querySelector('.category__btn.active');
+    active.classList.remove('active');
+    e.target.classList.add('active');
+
     workBtnProject.classList.add('anime');
     
     setTimeout(()=>{

@@ -89,7 +89,7 @@
   #navbar{
     display: flex;
     justify-content:space-between;
-    background:transparent;
+    background:var(--color-pink);
     align-items: center;
     width: 100%;
     position:  fixed;
@@ -116,6 +116,9 @@
   }
   .navbar__menu{
     display: flex;
+  }
+  .navbar__menu.open{
+    display: block;
   }
   .navbar__menu__item{
     margin:0 5px;
@@ -326,6 +329,9 @@
     height:100%;
     
   }
+  .project__description h3{
+    color:var(--color-orange);
+  }
   .project__description{
     position: absolute;
     width: 100%;
@@ -350,9 +356,10 @@
   position: relative;
   left: 45%;
   background: white;
-  width:30px;
-  height:3px;
-  margin: 15px 0 5px 0;
+  width:50px;
+  height:5px;
+  margin-top: 5px;
+  transform: translateX(-20%);
 }
 
 /* testimonials */

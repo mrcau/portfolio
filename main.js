@@ -15,6 +15,12 @@ document.addEventListener('scroll',()=>{
     }
 });
 
+// navbar toggle
+const navbarToggleBtn=document.querySelector('.navbar__toggle');
+navbarToggleBtn.addEventListener('click',()=>{
+    menu.classList.toggle('open');
+});
+
 // Handle scrolling
 const menu=document.querySelector('.navbar__menu');
 function scrolling(selector){
@@ -27,6 +33,7 @@ menu.addEventListener('click',(event)=>{
         return;
     }
     scrolling(link);
+    menu.classList.remove('open');
 });
 const btn__home__contact=document.querySelector('.home__contact');
 btn__home__contact.addEventListener('click',()=>{
@@ -66,7 +73,6 @@ workBtnCategory.addEventListener('click',(e)=>{
     const active = document.querySelector('.category__btn.active');
     active.classList.remove('active');
     e.target.classList.add('active');
-
     workBtnProject.classList.add('anime');
     
     setTimeout(()=>{
